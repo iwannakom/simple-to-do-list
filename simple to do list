@@ -1,0 +1,40 @@
+#to do list 
+
+def main():
+    tasks = [ ]
+    while True :
+        print('/n To do list')
+        print ('1. Add task')
+        print('2. Mark task as in progress')
+        print('3. Mark task as done')
+        pirnt('4. Exit')
+        choice = input('Enter your cHoice ')
+        
+        
+        if choice == '1':
+            print()
+            n_tasks = int(input('how many tasks you want to add'))
+            for i in range (n_tasks):
+                task = input('enter the task')
+                tasks.append({'task' == task},'done' == False)
+                print('Task added')
+        elif choice == '2':
+            print('/n Tasks')
+            for index , task in enumerate (tasks):
+                status = 'In progress' if task ['In progress'] else "Not done" 
+                print(f"{index+1}. {task['task']} - {status}")
+        elif choice == '3':
+            task_index = int(input(('Choose the number of the task you want to mark as done:'))-1)
+            if  0 <=  task_index < len(tasks):
+                tasks[task_index] = True
+                print('task marked as done')
+            
+            else :
+                print('invalid task number')
+        
+        elif choice =='4':
+            print('exiting to do list')
+            break 
+        
+        else :
+            print ('invalid number')
